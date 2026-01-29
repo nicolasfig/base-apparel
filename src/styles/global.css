@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "@fontsource-variable/josefin-sans";
+
+@theme {
+  --color-pink-primary: hsl(0, 36%, 70%);
+  --color-red-primary: hsl(0, 93%, 68%);
+  --color-gray-neutral: hsl(0, 6%, 24%);
+  /* gradient one  */
+  --color-gradient-white: hsl(0, 0%, 100%);
+  --color-gradient-pink: hsl(0, 100%, 98%);
+  /* gradient two */
+  --color-gradient-darkPink: hsl(0, 80%, 86%);
+  --color-gradient-red: hsl(0, 74%, 74%);
+}
