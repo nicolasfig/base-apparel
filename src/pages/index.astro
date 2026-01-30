@@ -6,27 +6,35 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/images/favicon-32x32.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Base Apparel</title>
 	</head>
-	<body class="bg-pinkpr">
-        <nav>
-            <a href="#"><img src="/images/logo.svg" alt="Base Apparel logo"></a>
+	<body class="s: bg-linear-135 from-gradient-white to to-gradient-pink">
+        <nav class="p-6 s:w-1/2">
+            <a href="#"><img class="w-25" src="/images/logo.svg" alt="Base Apparel logo"></a>
         </nav>
-        <main>
-            <div>
-                <img src="/images/hero-mobile.jpg" alt="A woman in elegant fashion posture against a warm, soft-focused background">
-            </div>
-            <div>
-                <h1>we're coming soon</h1>
-                <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-                <div>
-                    <input type="email" id="email" pattern=".+@example\.com" size="30" required placeholder="E-mail address" />
-                    <button class="bg-black"><img src="/images/icon-arrow.svg" alt="Arrow Icon"></button>
+        <main class="flex flex-col items-center justify-center w-full s:flex-row-reverse">
+                <!-- <img class="w-full" src="/images/hero-mobile.jpg" alt="A woman in elegant fashion posture against a warm, soft-focused background"> -->
+            <div class="w-100 h-100 s:h-full bg-[url(/images/hero-mobile.jpg)] s:bg-[url(/images/hero-desktop.jpg)] bg-cover bg-center s:w-1/2"/>
+                 
+            <div class="p-8 w-1/2">
+                <h1 class="text-6xl uppercase text-center text-gray-neutral"><span class="text-pink-primary font-extralight">we're</span> coming soon</h1>
+                <p class="py-8 text-pink-primary text-center">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+                <div class="flex relative items-center w-75">
+                    <input class="w-full border-gray-neutral/25 border px-4 py-2 rounded-full text-pink-primary" type="email" id="email" pattern=".+@example\.com" size="30" required placeholder="E-mail address" />
+                    <button type="submit" class="absolute right-0 h-full bg-linear-135 from-gradient-darkPink to-gradient-red px-5 py-2 rounded-full"><img src="/images/icon-arrow.svg" alt="Arrow Icon"></button>
                 </div>
             </div>
         </main>
 	</body>
 </html>
+
+<style>
+    .input-border {
+        border: 1px solid transparent; /* Required for border-image to show through */
+        border-image: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%)); /* The gradient */
+        border-image-slice: 1; /* Essential to ensure the entire gradient is used once */
+    }
+</style>

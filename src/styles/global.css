@@ -11,4 +11,6 @@
   /* gradient two */
   --color-gradient-darkPink: hsl(0, 80%, 86%);
   --color-gradient-red: hsl(0, 74%, 74%);
+
+  --breakpoint-s: 376px;
 }
